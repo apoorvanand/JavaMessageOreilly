@@ -1,0 +1,212 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.76 [en] (X11; U; Linux 2.2.16 i686) [Netscape]">
+</head>
+<body>
+&nbsp;
+<br><tt>README</tt>
+<br><tt>======</tt>
+<p><tt>The ZIP archive iBusMessageServerExamples.zip contains example applications</tt>
+<br><tt>that relate to those presented in the book 'Java Message Service'
+by O'Reilly</tt>
+<br><tt>and Associates. The implementation is derived from the initial
+code examples</tt>
+<br><tt>provided by O'Reilly and Associates:</tt>
+<p><tt>&nbsp;&nbsp;&nbsp; <a href="ftp://ftp.oreilly.com/pub/examples/java/javmesser">ftp://ftp.oreilly.com/pub/examples/java/javmesser</a></tt>
+<br>&nbsp;
+<p><tt>All examples are grouped in packages that refer to the chapters
+in the 'Java</tt>
+<br><tt>Message Server' book:</tt>
+<p><tt>&nbsp;&nbsp;&nbsp; Chapter 2: Developing a Simple Example</tt>
+<p><tt>&nbsp;&nbsp;&nbsp; Chapter 4: Publish and Subscribe</tt>
+<p><tt>&nbsp;&nbsp;&nbsp; Chapter 5: Point-to-point</tt>
+<p><tt>&nbsp;&nbsp;&nbsp; Chapter 6: Guaranteed Messaging, Transactions,
+Acknowledgements and Failures</tt>
+<br>&nbsp;
+<p><tt>This set of examples has some differences compared to the set of
+examples</tt>
+<br><tt>provided in 'Java Message Service'. See section Notes for more
+detailled</tt>
+<br><tt>information.</tt>
+<br>&nbsp;
+<p><tt>The examples contained and described in this archive are adapted
+to and tested</tt>
+<br><tt>with Softwired's JMS implementation, iBus//MessageServer Version
+4.1.0, on a</tt>
+<br><tt>JRE 2 platform for Linux.</tt>
+<br>&nbsp;
+<p><tt>Get a free trial distribution of iBus//MessageServer from Softwired:</tt>
+<p><tt>&nbsp;&nbsp;&nbsp; <a href="http://www.softwired-inc.com/products/serverstandard/serverstandard.html">http://www.softwired-inc.com/products/serverstandard/serverstandard.html</a></tt>
+<p><tt>If you want to install iBus//MessageServer simply to run the examples,
+we</tt>
+<br><tt>recommed iBus//MessageServer Standard Edition. The Standard Edition
+can be used</tt>
+<br><tt>without further administration.</tt>
+<p><tt>Of course, you may also use iBus//MessageServer Business Edition.
+However, to</tt>
+<br><tt>run the examples, you then need to administer the access control
+list</tt>
+<br><tt>(i.e. you have to create some Chat users). To administer access
+control,</tt>
+<br><tt>download and install the Administration Client.</tt>
+<p><tt>Read the documentation contained in the download package about setup
+and</tt>
+<br><tt>installation of an iBus//MessageServer.</tt>
+<br>&nbsp;
+<p><tt>Visit us at <a href="http://www.softwired-inc.com">http://www.softwired-inc.com</a>
+to get more information.</tt>
+<p><tt>For questions, please do not hesitate to contact:</tt>
+<p><tt>&nbsp;&nbsp;&nbsp; <a href="mailto:info@softwired-inc.com">info@softwired-inc.com</a></tt>
+<p><tt>Please send comments and bug reports to:</tt>
+<p><tt>&nbsp;&nbsp;&nbsp; <a href="mailto:support@softwired-inc.com">support@softwired-inc.com</a></tt>
+<br>&nbsp;
+<br>&nbsp;
+<p><tt>How to run the examples</tt>
+<br><tt>-----------------------</tt>
+<p><tt>In order to compile and run the examples you need to install:</tt>
+<p><tt>&nbsp;&nbsp;&nbsp; - JDK 1.1 (or higher). See http://java.sun.com
+for download info.</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; - iBus//MessageServer from Softwired. See above
+for download info.</tt>
+<p><tt>The following steps assume a UNIX environment.</tt>
+<p><tt>1.&nbsp; Open a shell and set its CLASSPATH environment variable.</tt>
+<p><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; > CLASSPATH=$EXAMPLE_CLASSES:$IBUS/client/lib/msrvClt.jar</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; > CLASSPATH=$CLASSPATH:$IBUS/client/lib/jndi.jar</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; > export CLASSPATH</tt>
+<p><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; where</tt>
+<p><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EXAMPLE_CLASSES is the path to the example class directory</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+( i.e. $HOME/projects/ibus_msrv/classes ).</tt>
+<p><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+IBUS is the path to iBus//MessageServer base directory</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+( i.e. /usr/local/java/iBusMessageServer4.1.0 ).</tt>
+<p><tt>2.&nbsp; Change to the directory where the source code resides.</tt>
+<p><tt>3.&nbsp; Compile the example code.</tt>
+<p><tt>&nbsp;&nbsp;&nbsp; I.e. to compile the example of chapter 2, type:</tt>
+<p><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; > javac -d $EXAMPLE_CLASSES
+*java</tt>
+<p><tt>&nbsp;&nbsp;&nbsp; This will first create a directory structure
+for the class files and then,</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; generate the class file Chat.class into that
+directory.</tt>
+<p><tt>4.&nbsp; Start the example program.</tt>
+<p><tt>&nbsp;&nbsp;&nbsp; I.e. to run the example of chapter 2, type:</tt>
+<p><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; > cd $EXAMPLE_CLASSES</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; > java chap2.chat.Chat
+topic-name</tt>
+<br>&nbsp;
+<p><tt>Notes</tt>
+<br><tt>-----</tt>
+<p><tt>We have tried to remain true to the examples in the book, but have
+made minor</tt>
+<br><tt>changes that enhance robustness or that avoid compilation problems
+in some</tt>
+<br><tt>development environments.</tt>
+<br>&nbsp;
+<p><tt>The class InitialContext has been adopted to return classes from
+the</tt>
+<br><tt>ch.softwired.jms package. It is now an inner class to avoid naming
+conflicts</tt>
+<br><tt>(i.e. JBuilder refused to compile Wholesaler and Retailer from
+chapter 2 if</tt>
+<br><tt>included in package chap2.chat).</tt>
+<br>&nbsp;
+<p><tt>Client IDs must be configured or set explicitly.</tt>
+<br><tt>Otherwise, the MessageServer will give a warning and assign a unique
+ID,</tt>
+<br><tt>such as UNKNOWN_CLIENT.rl.980869363741. To avoid this, we introduced
+an explicit</tt>
+<br><tt>ID assignment:</tt>
+<p><tt>&nbsp;&nbsp; connection.setClientID( username );</tt>
+<br>&nbsp;
+<p><tt>In chapter 2,</tt>
+<p><tt>a lookup() for a JMS topic may cause a ClassCastException which
+is caught.</tt>
+<br><tt>A message explains the problem, and the client terminates.</tt>
+<p><tt>&nbsp;&nbsp;&nbsp; Topic chatTopic = null;</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; try {</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; chatTopic = (Topic)jndi.lookup(topicName);</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; } catch ( ClassCastException e ) {</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.err.println(
+"The topic name \"" + topicName +</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"\" causes a ClassCastException :" );</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; e.printStackTrace();</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.err.println(
+"Do not use \"QueueConnectionFactory\" and " +</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"\"TopicConnectionFactory\" as topic name." );</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.exit( -1 );</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; }</tt>
+<br>&nbsp;
+<p><tt>If the main() argument list is wrong, the client terminates.</tt>
+<br><tt>One argument only, that is the topic name, is accepted. In that
+case,</tt>
+<br><tt>username and password are set to "guest".</tt>
+<br>&nbsp;
+<p><tt>In chapter 4 (and subsequently),</tt>
+<p><tt>the Wholesaler should not terminate just because of invalid deal
+descriptors.</tt>
+<br><tt>NoSuchElementException and NumberFormatException are caught.</tt>
+<p><tt>The Retailer now terminates on ENTER (not C-c):</tt>
+<p><tt>&nbsp;&nbsp;&nbsp; if ( s == null || s.length() == 0 ) retailer.exit(null);</tt>
+<br>&nbsp;
+<p><tt>In chapter 5 (and subsequently),</tt>
+<p><tt>client IDs must not only be configured or set explicitly, they must
+be unique</tt>
+<br><tt>as well:</tt>
+<p><tt>&nbsp;&nbsp;&nbsp; tConnect.setClientID(username + "-topic" );</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; qConnect.setClientID(username + "-queue" );</tt>
+<br>&nbsp;
+<p><tt>Non-JMS, SonicMQ-specific casts such as</tt>
+<p><tt>&nbsp;&nbsp;&nbsp; ((progress.message.jclient.QueueReceiver)qReceiver).setPrefetchThreshold(0);</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; ((progress.message.jclient.QueueReceiver)qReceiver).setPrefetchCount(1);</tt>
+<p><tt>have been deleted or uncommented.</tt>
+<br>&nbsp;
+<p><tt>In chapter 6,</tt>
+<p><tt>the Wholesaler's implementation of establishConnection() and onException()</tt>
+<br><tt>has changed. The client's JMS runtime of iBus//MessageServer will
+try to</tt>
+<br><tt>reestablish a lost connection. The file config.ibus.jms.txt defines
+the number</tt>
+<br><tt>of milliseconds to wait between connection attempts, and the number
+of connect</tt>
+<br><tt>attempts. If the JMS runtime fails, a ch.softwired.jms.ServerDiedException
+is</tt>
+<br><tt>thrown and then, the responsibility to reconnect is taken over
+by the client</tt>
+<br><tt>application. This is done by the check:</tt>
+<p><tt>&nbsp;&nbsp;&nbsp; if ( "ch.softwired.jms.ServerDiedException".equals</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( jmse.getClass().getName()
+) ) {</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.err.println(
+"\nServer has died, client still trying ..." );</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; establishConnection(mBroker,
+mUsername, mPassword);</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; }</tt>
+<p><tt>In addtion, Wholesaler.establishConnection() explicitely closes
+the connection</tt>
+<br><tt>to avoid connection ID conflicts:</tt>
+<p><tt>&nbsp;&nbsp;&nbsp; // Close an already open connection in both the
+client's JMS runtime</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; // and on the MessageServer itself, if possible
+(otherwise, warnings will</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; // notify the client that the MessageServer
+has died).</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; if ( connect != null ) {</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; connect.close();</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; connect = null;</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; }</tt>
+<br>&nbsp;
+<p><tt>To avoid a StringIndexOutOfBoundsException i.e. if you typed "EN":</tt>
+<p><tt>&nbsp;&nbsp;&nbsp; if( "END".equalsIgnoreCase( dealDesc ) ) {</tt>
+<br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; wholesaler.sendSequenceMarker(
+"END_SEQUENCE" );</tt>
+<br><tt>&nbsp;&nbsp;&nbsp; }</tt>
+<br>&nbsp;
+</body>
+</html>
